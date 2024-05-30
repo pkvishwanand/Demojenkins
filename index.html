@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><meta charset="UTF-8"><title>Print Example</title></head>
+<body>
+<p id="printable">This is the paragraph to print.</p>
+<button onclick="printParagraph()">Print Paragraph</button>
+<script>
+function printParagraph() {
+    var prtContent = document.getElementById('printable');
+    var WinPrint = window.open('', '', 'width=900,height=650');
+    WinPrint.document.write(prtContent.outerHTML);
+    WinPrint.document.close();
+    WinPrint.print();
+    WinPrint.close();
+}
+</script>
+</body>
+</html>
